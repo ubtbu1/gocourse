@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/userFragment">
+
+    <!-- 用户界面 -->
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.gocourse.UserFragment"
+        android:label="UserFragment">
+        <action
+            android:id="@+id/action_userFragment_to_scanFragment"
+            app:destination="@id/scanFragment" />
+        <action
+            android:id="@+id/action_userFragment_to_dateFragment"
+            app:destination="@id/dateFragment" />
+    </fragment>
+
+    <!-- 扫描界面 -->
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="com.example.gocourse.ScanFragment"
+        android:label="ScanFragment">
+        <action
+            android:id="@+id/action_scanFragment_to_dateFragment"
+            app:destination="@id/dateFragment" />
+    </fragment>
+
+    <!-- 日期界面 -->
+    <fragment
+        android:id="@+id/dateFragment"
+        android:name="com.example.gocourse.DateFragment"
+        android:label="DateFragment" />
+</navigation>
